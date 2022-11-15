@@ -2,42 +2,77 @@
 <html>
   <head>
     <link rel="stylesheet" href="./styles.css">
+    <script src="./nav.js" type="text/javascript" defer></script>
   </head>
   
   <body>
     <nav>
+      <!-- <nav-component></nav-component> -->
+      <!-- After the nav coding is completed, paste it into the nav.js file so it can be used as a component.  -->
       <div class="nav-wrapper">
         <div class="nav-section">
-          <ul class="nav-items">
-            <li>Home</li>
-            <li>Projects</li>
-            <!--
-              Ohio State Recruiting Analytics
-              Recipe System
-              Keyboard Visualizer
-            -->
+        <ul class="nav-items">
+            <li>DOUBLE STRAFE STUDIO</li>
+            <li class="projects">Projects</li>            
+            <div class="nav-projects-dropdown">
+                <p>hello</p>
+                <!-- <ul class="nav-projects-subitems">
+                <li>Keyboard Visualizer</li>
+                <li>TinyText Generator</li>
+                <li>CFB Recruiting</li>
+                <li>Recipe System</li>
+                <li>Youth Group Games Database</li>
+                </ul> -->
+            </div>
             <li>Blog</li>
             <!--
-              Cooking
-              Photography
-
+            Cooking
+            Photography
+            
             -->
-          </ul>
+            <li>About</li>
+        </ul>
         </div>
       </div>
     </nav>
 
     <header>
       <div class="header-text">
-        <h1>Enoch Ng</h1>
-        <p><img src=./assets/javascript-icon.png><img src=./assets/html-icon.png><img src=./assets/css-icon.png>Developer</p>
+        <h1>Double Strafe</h1>
+          <p><img src=./assets/javascript-icon.png><img src=./assets/html-icon.png><img src=./assets/css-icon.png>Developer</p>
       </div>
-      
-    </header>
-    <main>
+      <div class="header-background-cover">
 
-      <h1>Double Strafe Studio</h1>
-      <p>Welcome to my website!</p>
+      </div>
+      <div class="header-image">
+          <p></p>
+      </div>
+    </header>
+
+    <main>
+      <div class="project-grid-wrapper">
+
+        <div class="project-header">
+          <h1>Project Gallery</h1>
+        </div>
+
+        <div class="project-gallery">
+
+          <div class="project-gallery-left-panel">
+            <ul class="project-list">
+              <li>TinyText</li>
+              <li>Project 2</li>
+              <li>Project 3</li>
+              <li>Project 4</li>
+            </ul>
+          </div>
+
+          <div class="project-gallery-right-panel">
+
+          </div>
+
+        </div>
+      </div>
       <!--
         Q: What is this website for? 
         Putting this website together to showcase projects I've completed during my learning journey
@@ -84,7 +119,9 @@
       -->
     </main>
 
-    
+    <footer>
+
+    </footer>
   </body>
  
 </html>
