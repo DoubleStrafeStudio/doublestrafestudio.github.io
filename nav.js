@@ -5,33 +5,18 @@ class Nav extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <div class="nav-wrapper">
-                <div class="nav-section">
-                <ul class="nav-items">
-                    <li>DOUBLE STRAFE STUDIO</li>
-
-                    <li class="projects">Projects</li>            
-                    <div class="nav-projects-dropdown">
-                        <p>hello</p>
-                        <!-- <ul class="nav-projects-subitems">
-                        <li>Keyboard Visualizer</li>
-                        <li>TinyText Generator</li>
-                        <li>CFB Recruiting</li>
-                        <li>Recipe System</li>
-                        <li>Youth Group Games Database</li>
-                        </ul> -->
-                    </div>
-                    <li>Blog</li>
-                    <!--
-                    Cooking
-                    Photography
-                    
-                    -->
-                    <li>About</li>
-                </ul>
-                </div>
-            </div>
-            `;
+        <div class="nav-wrapper">
+          <div class="nav-section">
+          <ul class="nav-items">
+              <li><a href=./index.html><span id="company-name">DOUBLE STRAFE STUDIO</span></a></li>
+              <li><a href=./projects.html>Projects</a></li>            
+              <li><a href=./blog.html>Blog</a></li>
+              <li><a href=./about.html>About</a></li>
+              <li><a href=./contact.html>Contact</a></li>
+          </ul>
+          </div>
+        </div>
+        `;
     }
 }
 

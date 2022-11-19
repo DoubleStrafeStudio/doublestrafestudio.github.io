@@ -1,8 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./styles.css">
     <script src="./nav.js" type="text/javascript" defer></script>
+    <script src="./index.js" type="text/javascript" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <title>Double Strafe Studio</title>
   </head>
   
   <body>
@@ -12,31 +22,17 @@
       <div class="nav-wrapper">
         <div class="nav-section">
         <ul class="nav-items">
-            <li>DOUBLE STRAFE STUDIO</li>
-            <li class="projects">Projects</li>            
-            <div class="nav-projects-dropdown">
-                <p>hello</p>
-                <!-- <ul class="nav-projects-subitems">
-                <li>Keyboard Visualizer</li>
-                <li>TinyText Generator</li>
-                <li>CFB Recruiting</li>
-                <li>Recipe System</li>
-                <li>Youth Group Games Database</li>
-                </ul> -->
-            </div>
-            <li>Blog</li>
-            <!--
-            Cooking
-            Photography
-            
-            -->
-            <li>About</li>
+            <li><a href=./index.html><span id="company-name">DOUBLE STRAFE STUDIO</span></a></li>
+            <li><a href=./projects.html>Projects</a></li>            
+            <li><a href=./blog.html>Blog</a></li>
+            <li><a href=./about.html>About</a></li>
+            <li><a href=./contact.html>Contact</a></li>
         </ul>
         </div>
       </div>
     </nav>
 
-    <header>
+    <!-- <header>
       <div class="header-text">
         <h1>Double Strafe</h1>
           <p><img src=./assets/javascript-icon.png><img src=./assets/html-icon.png><img src=./assets/css-icon.png>Developer</p>
@@ -47,81 +43,85 @@
       <div class="header-image">
           <p></p>
       </div>
-    </header>
+    </header> -->
 
     <main>
       <div class="project-grid-wrapper">
 
         <div class="project-header">
-          <h1>Project Gallery</h1>
+          <h2>Project Gallery</h2>
         </div>
 
         <div class="project-gallery">
 
           <div class="project-gallery-left-panel">
             <ul class="project-list">
-              <li>TinyText</li>
-              <li>Project 2</li>
-              <li>Project 3</li>
-              <li>Project 4</li>
+              <li id="project1">Keyboard Visualizer</li>
+              <li id="project2">Youth Games Database</li>
+              <li id="project3">Monikers Online</li>
+              <li id="project4">Project Haven</li>
             </ul>
           </div>
 
-          <div class="project-gallery-right-panel">
-
+          <div class="project-gallery-right-panel" id="projectDisplay">
+            <p>If this works, this will be gone. </p>
+            <div class="link-to-project">
+              link to project;
+            </div>
           </div>
 
         </div>
       </div>
-      <!--
-        Q: What is this website for? 
-        Putting this website together to showcase projects I've completed during my learning journey
-        to reflect my skills as a developer. Some of these projects are also meant to have actual users. The hope is that users
-        may need a developer can discover my other projects/abilities and consider hiring me.
-
-        Q: What are the skills I want to develop? 
-        Create interactive web apps that help the users in some way, whether that's to help them keep up on college football recruiting, 
-        help them plan their cooking times for following recipes, help them make purchasing/planning decisions for their custom mechanical
-        keyboards, help organize their thoughts as they read through scripture, or even calculate their emissions for air permits. 
-
-        Q: What's the point of developing these skills? 
-        I wanted to explore a different career. I've spent 8 years as an environmental consultant and am not sure if it's something I want
-        to do for the rest of my life. But regardless, this is a skill I want to learn. Although I was originally not that into the idea 
-        of being a developer, the chance to create things that are functional and address needs through computation is pretty cool. I'm 
-        not yet certain that every aspect of it is going to be fun, but I'd just like to explore it. 
-
-        Q: Are you doing this full time? 
-        Yes, I have quit my job as an environmental consultant to work on learning this full-time. 
-
-        Q: What's your plan for learning?
-        I'm going to go through the codecademy courses available to me and also build the projects listed above, plus anything else that 
-        might make sense to fit into the learning plan. I am hoping that establishing a foundation through codecademy and gradually gaining
-        experience through the project work will prepare me to land a job as a developer.
-
-        Q: Isn't quitting your decent job just to learn how to code a little bit extreme?
-        Well, I wanted to work on learning a lot of other things in addition to development. I'm interested in trying to learn how to cook 
-        a lot of cuisines, finally becoming fit, diving into more theology and spending time in the Word and with God, improving my Cantonese
-        and Korean, and either picking piano back up or getting better at art. 
-
-        Q: How are you going to do each of those things? 
-        For cooking, I'll dedicate a couple months to very specific cuisines to learn all I can about them and master recipes. I'll document 
-        the journey and blog about it while practicing photography and figure out how to present the information to develop visualization skills.
-        For becoming fit, that's mostly just down to establishing a morning routine of working out. I'm not trying to do anything crazy, but want 
-        to develop a habit so that when I return to full-time work, I'll be more able to keep up with working out. 
-        For growing my spiritual life, it comes down to also developing a morning routine to spend time in scripture, praying to God, and reshaping
-        my perspective on my life and the world. Try to find ways to live out my faith and learn to depend on God. And then direct that experience outward.
-        For improving Cantonese and Korean, I'll use an app to learn the language and seek to exercise speaking it more often. Get to a point where 
-        I can watch content without subtitles. Not sure about the Cantonese, but for the Korean, will stick with LingoDeer for now. Supplement with some 
-        other online resources. 
-        Lastly, I'm probably going to lean towards art, but I'll do some exercises from time to time on learning gesture, figure, structure, etc. 
-        Idk, this is very much a lower-priority goal for me. It's something I really want to learn, but not a very high priority in terms of 
-        capitalizing on my time away from a full-time job. 
-      -->
     </main>
-
+    
     <footer>
-
+      
     </footer>
   </body>
- 
-</html>
+  
+  </html>
+  
+  <!--
+    Q: What is this website for? 
+    Putting this website together to showcase projects I've completed during my learning journey
+    to reflect my skills as a developer. Some of these projects are also meant to have actual users. The hope is that users
+    may need a developer can discover my other projects/abilities and consider hiring me.
+
+    Q: What are the skills I want to develop? 
+    Create interactive web apps that help the users in some way, whether that's to help them keep up on college football recruiting, 
+    help them plan their cooking times for following recipes, help them make purchasing/planning decisions for their custom mechanical
+    keyboards, help organize their thoughts as they read through scripture, or even calculate their emissions for air permits. 
+
+    Q: What's the point of developing these skills? 
+    I wanted to explore a different career. I've spent 8 years as an environmental consultant and am not sure if it's something I want
+    to do for the rest of my life. But regardless, this is a skill I want to learn. Although I was originally not that into the idea 
+    of being a developer, the chance to create things that are functional and address needs through computation is pretty cool. I'm 
+    not yet certain that every aspect of it is going to be fun, but I'd just like to explore it. 
+
+    Q: Are you doing this full time? 
+    Yes, I have quit my job as an environmental consultant to work on learning this full-time. 
+
+    Q: What's your plan for learning?
+    I'm going to go through the codecademy courses available to me and also build the projects listed above, plus anything else that 
+    might make sense to fit into the learning plan. I am hoping that establishing a foundation through codecademy and gradually gaining
+    experience through the project work will prepare me to land a job as a developer.
+
+    Q: Isn't quitting your decent job just to learn how to code a little bit extreme?
+    Well, I wanted to work on learning a lot of other things in addition to development. I'm interested in trying to learn how to cook 
+    a lot of cuisines, finally becoming fit, diving into more theology and spending time in the Word and with God, improving my Cantonese
+    and Korean, and either picking piano back up or getting better at art. 
+
+    Q: How are you going to do each of those things? 
+    For cooking, I'll dedicate a couple months to very specific cuisines to learn all I can about them and master recipes. I'll document 
+    the journey and blog about it while practicing photography and figure out how to present the information to develop visualization skills.
+    For becoming fit, that's mostly just down to establishing a morning routine of working out. I'm not trying to do anything crazy, but want 
+    to develop a habit so that when I return to full-time work, I'll be more able to keep up with working out. 
+    For growing my spiritual life, it comes down to also developing a morning routine to spend time in scripture, praying to God, and reshaping
+    my perspective on my life and the world. Try to find ways to live out my faith and learn to depend on God. And then direct that experience outward.
+    For improving Cantonese and Korean, I'll use an app to learn the language and seek to exercise speaking it more often. Get to a point where 
+    I can watch content without subtitles. Not sure about the Cantonese, but for the Korean, will stick with LingoDeer for now. Supplement with some 
+    other online resources. 
+    Lastly, I'm probably going to lean towards art, but I'll do some exercises from time to time on learning gesture, figure, structure, etc. 
+    Idk, this is very much a lower-priority goal for me. It's something I really want to learn, but not a very high priority in terms of 
+    capitalizing on my time away from a full-time job. 
+  -->
