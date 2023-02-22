@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Load development stylesheets. To be merged into one stylesheet  -->
+    <link rel="stylesheet" href="./base.css">
+    <link rel="stylesheet" href="./nav.css">
     <link rel="stylesheet" href="./styles.css">
+
+    <!-- Load javascript -->
     <script src="./nav.js" type="text/javascript" defer></script>
     <script src="./index.js" type="text/javascript" defer></script>
+    
+    <!-- Load FontAwesome and Google Fonts -->
     <script src="https://kit.fontawesome.com/aa790da9c3.js" crossorigin="anonymous" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,9 +25,9 @@
   
   <body>
     <nav>
-      <!-- <nav-component></nav-component> -->
+      <nav-component></nav-component>
       <!-- After the nav coding is completed, paste it into the nav.js file so it can be used as a component.  -->
-      <div class="nav-wrapper">
+      <!-- <div class="nav-wrapper">
         <div class="nav-section">
           <ul class="nav-items">
               <li><a href=./index.html><span id="studio-name">DOUBLE STRAFE STUDIO</span></a></li>
@@ -28,22 +35,26 @@
               <li><a href=./blog.html>Blog</a></li>
               <li><a href=./about.html>About</a></li>
               <li><a href=./contact.html>Contact</a></li>
-          </ul>
-          <div class="nav-search-bar">
+          </ul> -->
+          <!-- <div class="nav-search-bar">
             <div class="search-box">
               Search 
             </div>
             <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </div>
-      </div>
+          </div> -->
+        <!-- </div>
+      </div> -->
     </nav>
 
     <main>
       <div class="project-grid-wrapper">
-
-        <div class="project-header">
-          <h2>Project Gallery</h2>
+        <div class="project-header-wrapper">
+          <div class="project-header-left">
+            <h2>Project Gallery</h2>
+          </div>
+          <div class="project-header-right">
+            <div class="project-header-right-line"></div>
+          </div>
         </div>
 
         <div class="project-gallery">
@@ -62,10 +73,35 @@
             <div class="link-to-project">
               link to project;
             </div>
-          </div>
-
+          </div>  
         </div>
       </div>
+      
+      <div class="project-window" id="project-window-1">
+        <p>Hi I'm the second row</p>
+      </div>
+
+      <div class="project-text" id="project-text-1">
+        <h2>TinyText Converter</h2>
+        <p>Sometimes normal text doesn't convey the message of what you want to say properly and you just need that diminutive font size to help characterize your 
+          thoughts. Unfortunately, that's not possible in most instant messaging environments. </p>
+        <p><br />With the help of unicode symbols that are smaller versions of latin 
+          alphabet letters, this converter can help you with that! It will take in your typed message and convert it to a smaller version to make your message that much cuter, 
+          convey that meek tone of voice, or whatever else an adorably smaller font might help you say.</p>
+      </div>
+
+      <div class="project-text" id="project-text-2">
+        
+        <p></p>
+      </div>
+      <div class="project-window" id="project-window-2">
+        <h2>Keyboard Visualizer</h2>
+        <p>This three.js-based graphical application is here to help keyboard enthusiasts vizualise their dream keyboards. Custom mechanical keyboards are too expensive to 
+          be left wondering what it will look like 2 years and $500+ later. This visualizer will let help you see it before you commit to it buying that case or those 
+          keycaps</p>
+      </div>
+
+
     </main>
     
     <footer>
@@ -75,47 +111,4 @@
   
   </html>
   
-  <!--
-    Q: What is this website for? 
-    Putting this website together to showcase projects I've completed during my learning journey
-    to reflect my skills as a developer. Some of these projects are also meant to have actual users. The hope is that users
-    may need a developer can discover my other projects/abilities and consider hiring me.
-
-    Q: What are the skills I want to develop? 
-    Create interactive web apps that help the users in some way, whether that's to help them keep up on college football recruiting, 
-    help them plan their cooking times for following recipes, help them make purchasing/planning decisions for their custom mechanical
-    keyboards, help organize their thoughts as they read through scripture, or even calculate their emissions for air permits. 
-
-    Q: What's the point of developing these skills? 
-    I wanted to explore a different career. I've spent 8 years as an environmental consultant and am not sure if it's something I want
-    to do for the rest of my life. But regardless, this is a skill I want to learn. Although I was originally not that into the idea 
-    of being a developer, the chance to create things that are functional and address needs through computation is pretty cool. I'm 
-    not yet certain that every aspect of it is going to be fun, but I'd just like to explore it. 
-
-    Q: Are you doing this full time? 
-    Yes, I have quit my job as an environmental consultant to work on learning this full-time. 
-
-    Q: What's your plan for learning?
-    I'm going to go through the codecademy courses available to me and also build the projects listed above, plus anything else that 
-    might make sense to fit into the learning plan. I am hoping that establishing a foundation through codecademy and gradually gaining
-    experience through the project work will prepare me to land a job as a developer.
-
-    Q: Isn't quitting your decent job just to learn how to code a little bit extreme?
-    Well, I wanted to work on learning a lot of other things in addition to development. I'm interested in trying to learn how to cook 
-    a lot of cuisines, finally becoming fit, diving into more theology and spending time in the Word and with God, improving my Cantonese
-    and Korean, and either picking piano back up or getting better at art. 
-
-    Q: How are you going to do each of those things? 
-    For cooking, I'll dedicate a couple months to very specific cuisines to learn all I can about them and master recipes. I'll document 
-    the journey and blog about it while practicing photography and figure out how to present the information to develop visualization skills.
-    For becoming fit, that's mostly just down to establishing a morning routine of working out. I'm not trying to do anything crazy, but want 
-    to develop a habit so that when I return to full-time work, I'll be more able to keep up with working out. 
-    For growing my spiritual life, it comes down to also developing a morning routine to spend time in scripture, praying to God, and reshaping
-    my perspective on my life and the world. Try to find ways to live out my faith and learn to depend on God. And then direct that experience outward.
-    For improving Cantonese and Korean, I'll use an app to learn the language and seek to exercise speaking it more often. Get to a point where 
-    I can watch content without subtitles. Not sure about the Cantonese, but for the Korean, will stick with LingoDeer for now. Supplement with some 
-    other online resources. 
-    Lastly, I'm probably going to lean towards art, but I'll do some exercises from time to time on learning gesture, figure, structure, etc. 
-    Idk, this is very much a lower-priority goal for me. It's something I really want to learn, but not a very high priority in terms of 
-    capitalizing on my time away from a full-time job. 
-  -->
+  

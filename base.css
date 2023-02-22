@@ -1,0 +1,20 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', Arial, sans-serif;
+    /* border: 1px solid blue; */
+}
+
+:root {
+    font-size: 16px; /* This is default so it technically doesn't need to be here 
+    but I might want to change it so it's here for now */
+    --main-nav-color: rgb(69, 90, 100);
+    --nav-font-size: 1.5rem;
+    --site-background: rgb(241, 241, 241)
+}
+
+body {
+    background-color: var(--site-background);
+    
+    /* font-family: Helvetica, sans-serif; */
+}

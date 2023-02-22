@@ -1,0 +1,17 @@
+main {
+    position:relative;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.25rem;
+    margin: auto;
+    justify-content: center;
+    max-width: 1920px;
+    width: 90%;
+    /* border: 1px solid red; */
+}
+
+.body-title {
+    font-size: 5rem;
+    position: absolute;
+    
+}

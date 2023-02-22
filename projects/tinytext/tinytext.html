@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="./styles.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Load development stylesheets. To be merged into one stylesheet  -->
+        <link rel="stylesheet" href="../../base.css">
+        <link rel="stylesheet" href="../../nav.css">              
+        
+        <!-- Load Javascript -->
         <script src="tinytext.js" type="text/javascript" defer></script>
+        <script src="../../nav.js" type="text/javascript"></script>
+
+        <!-- Load Fonts -->
+        <!-- FontAwesome -->
+        <script src="https://kit.fontawesome.com/aa790da9c3.js" crossorigin="anonymous" defer></script> 
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+        
     </head>
 
     <body>
-        <form>
-            <label for="inputText">Input a string to convert to TinyText: </label>
-            <input id="inputText" name="inputText" type="text">
-            <input type="submit" value="Submit">
-        </form>
-        <p id="input-text"></p>
+        <nav-component></nav-component>
+        <main>
+            <div class="body-title">
+                TinyText Converter
+            </div>
+
+        </main>
+        <!-- <form onsubmit="return convert()" id="theForm"> -->
+            <!-- <label for="inputText">Input a string to convert to TinyText: </label> -->
+            <input id="input-text" name="input-text" type="text" placeholder ="type your text here" maxlength="255">
+            <input id="submit-button" type="button" value="Convert">
+            <!-- <div id="submitButton" style="border: 1px solid black">click on me to convert</div> -->
+        <!-- </form> -->
+        <!-- <p id="inputText">yo change me</p> -->
         <div class="converted">
             <p>Converted TinyText:</p>
-            <p class="returned-text"></p>
+            <p id="returned-text">This is your converted text.</p>
+            <p id="available-letters"></p>
+            <P>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+-=()</P>
         </div>
     </body>
 </html>
