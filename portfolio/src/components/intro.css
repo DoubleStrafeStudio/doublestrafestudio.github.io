@@ -1,0 +1,19 @@
+.heading-text {
+    font-weight: bold;
+}
+
+.intro-statement {
+    margin: 15rem 0;
+
+    font-size: 3rem;
+    line-height: 15rem;
+}
+
+.highlight-words {
+    color: var(--gradient-1)
+}
+
+.highlight-words a {
+    text-decoration: none;
+    color: inherit;
+}

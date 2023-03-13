@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <linearGradient id="Gradient1" x1="0" x2="0" y1="1" y2="0">
+      <stop class="stop1" offset="0%" stop-color="#24E6A8"/>
+      <stop class="stop2" offset="100%" stop-color="#08AEEA"/>
+    </linearGradient>
+    <style>
+      .cls-1 {
+        fill: url(#Gradient1);
+        <!-- fill-rule: evenodd; -->
+      }
+    </style>
+  </defs>
+  <path id="_8" data-name="8" class="cls-1" d="M150,900L900,0V150L150,1050V900ZM0,900L750,0V150L0,1050V900Z"/>
+</svg>
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7c7c7c;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="_8" data-name="8" class="cls-1" d="M150,900L900,0V150L150,1050V900ZM0,900L750,0V150L0,1050V900Z"/>
+</svg> -->

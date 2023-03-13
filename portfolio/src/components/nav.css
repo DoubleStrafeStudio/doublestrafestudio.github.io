@@ -1,0 +1,213 @@
+:root {
+    --logo-size: 4rem;
+    --nav-text-positioning: 2rem;
+    /* MAY need to create a variable for the letter-spacing for the neuzeit grotesk uses. Revisit this when more content is added. */
+    color: var(--text-color);
+}
+
+.nav-bar-wrapper {
+    display: flex;
+    height: auto;
+    margin: 0.75rem 0;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+}
+
+.nav-item-list {
+    display: flex;
+    padding: 0;
+
+    list-style: none;
+    /* border: 1px solid green; */
+}
+
+/* Gets each nav item placed along the same line and allows items within each item to be positioned absolutely. */
+.nav-item {
+    position: relative;
+    display: flex;
+    margin-right: 5rem;
+
+    /* border: 1px solid purple; */
+}
+
+/*For all nav links besides the main logo*/
+.nav-item:nth-child(n+2) { 
+    /* position: relative; */
+    height: fit-content;
+
+    top: calc(var(--logo-size)/6.4);
+    font-size: calc(var(--logo-size)/3);
+    font-weight: bold;
+    letter-spacing: -0.065rem;
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: inherit;
+    transition: 150ms;
+}
+
+/* Hover Effects for Nav Bar----------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------ */
+
+/* The text --------------------------------------------------------------------------------------------------- */
+/* .nav-item a::before {
+    position: absolute;
+    content: attr(title);
+    color: transparent;
+    color: black;
+    z-index: -1;
+    transition: 2000ms 200ms;
+}
+.nav-item a:hover::before {
+    color: black;
+}
+.nav-item a:not(hover)::before {
+    color: transparent;
+}
+.nav-item a:hover {
+    background-image: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+} */
+
+.nav-item a:hover {
+    color: var(--gradient-1);
+}
+
+/* The bars underneath ---------------------------------------------------------------------------------------- */
+.nav-item:nth-child(n+2) a::after {
+    position: absolute;
+
+    --bar-height: calc(var(--logo-size)/20);
+    bottom: calc(-1*var(--bar-height)); /* Offsets the height of the bar */
+    height: var(--bar-height);
+    left: 0;
+    width: 0px;
+    content: '';
+    
+    border-radius: 3px;
+    /* background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); */
+    background-color: var(--gradient-1);
+    opacity: 1;
+
+    transition: 150ms;
+}
+
+.nav-item:nth-child(n+2) a:hover::after {
+    width: 100%;
+    opacity: 1;
+    /* transition-duration: 200ms; */
+}
+
+.nav-item:nth-child(n+2) a:not(hover)::after {
+    width: 0%;
+    opacity: 0;
+    /* transition-duration: 200ms; */
+}
+
+#logoSVG {
+    position: absolute;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    top: 0;
+}
+
+#logoName {
+    /* line-height: calc(var(--logo-size)*1.2/4.375); */
+    /* line-height: 1.2rem; */
+    /* border: 1px solid red; */
+    font-size: calc(var(--logo-size)*0.5);
+    letter-spacing: -0.15rem;
+    font-weight: bold;
+    margin-left: calc(var(--logo-size)*0.76);
+    
+
+    display: flex;
+    position: relative;
+    /* align-items: end; */
+    /* top: calc(var(--logo-size)*2/4.375); */
+    /* bottom: calc(var(--logo-size)*-0.2); */
+    /* bottom: -0.75rem;
+    bottom: -1.4rem; */
+}
+
+.nav-item:nth-child(n+2), #logoName {
+    margin-top: calc(var(--logo-size)*0.335);
+}
+
+
+.nav-bar-right {
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.contact-button-wrapper {
+    height: 100%;
+}
+
+.contact-button {
+    padding: 0.5rem;
+
+
+    background-color: var(--gradient-1);
+    background-image: linear-gradient(0deg, var(--gradient-1), var(--gradient-1) 50%, var(--gradient-2) 100%);
+    background-size: 100% 400%;
+    background-position-y:bottom;
+    border-radius: 0.5rem;
+
+    font-size: calc(var(--logo-size)/3);
+    font-weight: bold;
+    top: calc(var(--logo-size)/6.4);
+    letter-spacing: -0.065rem;
+    margin-top: calc(var(--logo-size)*0.335);
+
+    transition: 200ms;
+}
+
+.contact-button a, .contact-button a:visited {
+    display: block;
+    height:100%;
+    width:100%;
+    text-decoration: none;
+    color: var(--anti-gradient-1);
+    /* color: #552e6b */
+    
+}
+
+.contact-button:hover {
+    background-position-y: top;
+    transition: 500ms;
+}
+
+.color-scheme {
+    /* border: 1px solid orangered; */
+    margin-right: 1.5rem;
+    width: 1rem;
+    position: relative;
+}
+
+.color-scheme div {
+    display: flex;
+    margin-top: calc((var(--logo-size)*0.52));
+    vertical-align: bottom;
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    /* border: 1px solid #a7a7a7; */
+    border-radius: 1rem;
+}
+
+#color-one {
+    background-color: var(--gradient-1);
+    right: .25rem;
+    top: -.2rem;
+}
+
+#color-two {
+    background-color: var(--gradient-2);
+    right: -0.25rem;
+    top: 0.2rem;
+}
+

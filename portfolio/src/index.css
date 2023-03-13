@@ -1,0 +1,41 @@
+:root {
+  font-family: "Neuzeit Grotesk", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* color-scheme: light dark; */
+  /* color: #373737; */
+  /* background-color: hsl(0, 0, 40); */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}  */
+
+:root {
+  /* --gradient-1: #24E6A8;
+  --gradient-2: #08AEEA; */
+  --gradient-1: #f15353;
+  --gradient-2: #b92d63;
+
+  --text-color: #373737;
+  --anti-text-color: hsl(0, 0%, 95%);
+}
+
+[data-theme='dark'] {
+  --text-color: hsl(0, 0%, 95%);
+  --anti-text-color:hsl(229, 19%, 17%); 
+}
