@@ -1,114 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <link rel="icon" href="./src/assets/8-favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DoubleStrafe Studio</title>
 
-    <!-- Load development stylesheets. To be merged into one stylesheet  -->
-    <link rel="stylesheet" href="./base.css">
+    <!-- Stylesheets to be loaded in-->
+    <!-- For production, switch over to a finalized sheet -->
+    <!-- <link rel="stylesheet" href="./base.css">
     <link rel="stylesheet" href="./nav.css">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css"> -->
 
-    <!-- Load javascript -->
-    <script src="./nav.js" type="text/javascript" defer></script>
-    <script src="./index.js" type="text/javascript" defer></script>
-    
     <!-- Load FontAwesome and Google Fonts -->
-    <script src="https://kit.fontawesome.com/aa790da9c3.js" crossorigin="anonymous" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/aa790da9c3.js" crossorigin="anonymous" defer></script> -->
+    <!-- Google Fonts (Inactive) -->
+      <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"> -->
+    <!-- Adobe Fonts -->
+      <!-- Neuzeit Grotesk -->
+      <link rel="stylesheet" href="https://use.typekit.net/psg3vgf.css">
 
-    <title>Double Strafe Studio</title>
+
   </head>
-  
   <body>
-    <nav>
-      <nav-component></nav-component>
-      <!-- After the nav coding is completed, paste it into the nav.js file so it can be used as a component.  -->
-      <!-- <div class="nav-wrapper">
-        <div class="nav-section">
-          <ul class="nav-items">
-              <li><a href=./index.html><span id="studio-name">DOUBLE STRAFE STUDIO</span></a></li>
-              <li><a href=./projects.html>Projects</a></li>            
-              <li><a href=./blog.html>Blog</a></li>
-              <li><a href=./about.html>About</a></li>
-              <li><a href=./contact.html>Contact</a></li>
-          </ul> -->
-          <!-- <div class="nav-search-bar">
-            <div class="search-box">
-              Search 
-            </div>
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div> -->
-        <!-- </div>
-      </div> -->
-    </nav>
-
-    <main>
-      <div class="project-grid-wrapper">
-        <div class="project-header-wrapper">
-          <div class="project-header-left">
-            <h2>Project Gallery</h2>
-          </div>
-          <div class="project-header-right">
-            <div class="project-header-right-line"></div>
-          </div>
-        </div>
-
-        <div class="project-gallery">
-
-          <div class="project-gallery-left-panel">
-            <ul class="project-list">
-              <li id="project1">Keyboard Visualizer</li>
-              <li id="project2">Youth Games Database</li>
-              <li id="project3">Monikers Online</li>
-              <li id="project4">Project Haven</li>
-            </ul>
-          </div>
-
-          <div class="project-gallery-right-panel" id="projectDisplay">
-            <p>If this works, this will be gone. </p>
-            <div class="link-to-project">
-              link to project;
-            </div>
-          </div>  
-        </div>
-      </div>
-      
-      <div class="project-window" id="project-window-1">
-        <p>Hi I'm the second row</p>
-      </div>
-
-      <div class="project-text" id="project-text-1">
-        <h2>TinyText Converter</h2>
-        <p>Sometimes normal text doesn't convey the message of what you want to say properly and you just need that diminutive font size to help characterize your 
-          thoughts. Unfortunately, that's not possible in most instant messaging environments. </p>
-        <p><br />With the help of unicode symbols that are smaller versions of latin 
-          alphabet letters, this converter can help you with that! It will take in your typed message and convert it to a smaller version to make your message that much cuter, 
-          convey that meek tone of voice, or whatever else an adorably smaller font might help you say.</p>
-      </div>
-
-      <div class="project-text" id="project-text-2">
-        
-        <p></p>
-      </div>
-      <div class="project-window" id="project-window-2">
-        <h2>Keyboard Visualizer</h2>
-        <p>This three.js-based graphical application is here to help keyboard enthusiasts vizualise their dream keyboards. Custom mechanical keyboards are too expensive to 
-          be left wondering what it will look like 2 years and $500+ later. This visualizer will let help you see it before you commit to it buying that case or those 
-          keycaps</p>
-      </div>
-
-
-    </main>
-    
-    <footer>
-      
-    </footer>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
-  
-  </html>
-  
-  
+</html>
