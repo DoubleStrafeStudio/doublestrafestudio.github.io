@@ -7,10 +7,10 @@
 
 .nav-bar-wrapper {
     display: flex;
-    height: auto;
+    height: 4rem;
     margin: 0.75rem 0;
     justify-content: space-between;
-    /* border: 1px solid red; */
+    border: 1px solid red;
 }
 
 .nav-item-list {
@@ -18,7 +18,7 @@
     padding: 0;
 
     list-style: none;
-    /* border: 1px solid green; */
+    border: 1px solid green;
 }
 
 /* Gets each nav item placed along the same line and allows items within each item to be positioned absolutely. */
@@ -27,7 +27,7 @@
     display: flex;
     margin-right: 5rem;
 
-    /* border: 1px solid purple; */
+    border: 1px solid purple;
 }
 
 /*For all nav links besides the main logo*/
@@ -35,7 +35,7 @@
     /* position: relative; */
     height: fit-content;
 
-    top: calc(var(--logo-size)/6.4);
+    /* top: calc(var(--logo-size)/6.4); */
     font-size: calc(var(--logo-size)/3);
     font-weight: bold;
     letter-spacing: -0.065rem;
@@ -66,14 +66,14 @@
     color: transparent;
 }
 .nav-item a:hover {
-    background-image: linear-gradient(45deg, var(--gradient-1), var(--gradient-2));
+    background-image: linear-gradient(45deg, var(--color-1), var(--color-2));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 } */
 
 .nav-item a:hover {
-    color: var(--gradient-1);
+    color: var(--color-1);
 }
 
 /* The bars underneath ---------------------------------------------------------------------------------------- */
@@ -88,8 +88,8 @@
     content: '';
     
     border-radius: 3px;
-    /* background: linear-gradient(45deg, var(--gradient-1), var(--gradient-2)); */
-    background-color: var(--gradient-1);
+    /* background: linear-gradient(45deg, var(--color-1), var(--color-2)); */
+    background-color: var(--color-1);
     opacity: 1;
 
     transition: 150ms;
@@ -106,7 +106,6 @@
     opacity: 0;
     /* transition-duration: 200ms; */
 }
-
 #logoSVG {
     position: absolute;
     width: var(--logo-size);
@@ -151,8 +150,8 @@
     padding: 0.5rem;
 
 
-    background-color: var(--gradient-1);
-    background-image: linear-gradient(0deg, var(--gradient-1), var(--gradient-1) 50%, var(--gradient-2) 100%);
+    background-color: var(--color-1);
+    background-image: linear-gradient(0deg, var(--color-1), var(--color-1) 50%, var(--color-2) 100%);
     background-size: 100% 400%;
     background-position-y:bottom;
     border-radius: 0.5rem;
@@ -171,13 +170,14 @@
     height:100%;
     width:100%;
     text-decoration: none;
-    color: var(--anti-gradient-1);
+    color: var(--anti-text-color);
     /* color: #552e6b */
     
 }
 
 .contact-button:hover {
     background-position-y: top;
+    cursor:pointer;
     transition: 500ms;
 }
 
@@ -200,13 +200,13 @@
 }
 
 #color-one {
-    background-color: var(--gradient-1);
+    background-color: var(--color-1);
     right: .25rem;
     top: -.2rem;
 }
 
 #color-two {
-    background-color: var(--gradient-2);
+    background-color: var(--color-2);
     right: -0.25rem;
     top: 0.2rem;
 }

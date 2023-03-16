@@ -13,8 +13,9 @@ function App() {
     const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
   }
+
   return (
-    <div className="App" data-theme={theme}>
+    <div className="App" data-lightdark={theme}>
       <div className='content-wrapper'>
         <button onClick={switchTheme}>
           Switch to {theme === 'light' ? 'Dark' : 'Light'} Theme

@@ -1,0 +1,6 @@
+#logoSVG {
+    position: absolute;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    top: 0;
+}
