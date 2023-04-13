@@ -28,11 +28,11 @@ export function Nav () {
 
     return (
         <div className='nav-bar-wrapper'>
+            <Logo colorOne={colorOne} colorTwo={colorTwo}/>
             <ul className='nav-item-list'>
+                
                 <li className='logo nav-item'>
-                    <div id='logo'>
-                        <Logo colorOne={colorOne} colorTwo={colorTwo}/>
-                    </div>
+                    
                     <div id='logoName'><a href='./index.html'>DoubleStrafe Studio</a></div>
                 </li>
                         {/* <img src='./src/assets/Fullsize-1-row.png' height='96px' />   */}
@@ -46,7 +46,7 @@ export function Nav () {
                     <div id='color-one'></div>
                     <div id='color-two'></div>
                 </div> */}
-                <ThemePicker />
+                {/* <ThemePicker /> */}
                 <div className='contact-button-wrapper'>
                     <div className='contact-button' onClick={handleContactClick}>
                         {/* <a href='./contact'>Contact Me</a> */}

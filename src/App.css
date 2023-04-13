@@ -5,14 +5,28 @@
 
 .App {
   width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  
   color: var(--text-color);
   background-color: var(--anti-text-color);
-  position: absolute;
 }
 
-.content-wrapper {
+footer {
+  background-color: var(--color-1);
+}
+
+.content-wrapper, header, .footer-content-wrapper {
   max-width: 1920px;
   width: 90%;
   margin: 0 auto;
   padding: 0;
+
+
+}
+
+.content-wrapper, header {
+  background-color: var(--anti-text-color);
 }

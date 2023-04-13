@@ -1,4 +1,5 @@
 import React from 'react';
+import './logo.css';
 
 export function Logo ({colorOne, colorTwo}) {
 

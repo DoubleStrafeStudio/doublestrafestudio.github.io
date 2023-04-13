@@ -2,5 +2,8 @@
     position: absolute;
     width: var(--logo-size);
     height: var(--logo-size);
-    top: 0;
+    /* top: 0; */
+    display: flex;
+    align-self: center;
+
 }

@@ -1,0 +1,14 @@
+.response-input {
+    width: 50%;
+    height: 6rem;
+}
+
+.question-navigation-btn {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    margin-right: 1rem;
+    font-weight: bold;
+    
+    padding: 1rem;
+}

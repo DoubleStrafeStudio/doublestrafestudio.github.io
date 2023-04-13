@@ -7,27 +7,30 @@
 
 .nav-bar-wrapper {
     display: flex;
-    height: 4rem;
+    /* height: 4rem; */
     margin: 0.75rem 0;
     justify-content: space-between;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    align-items: end;
 }
 
 .nav-item-list {
     display: flex;
-    padding: 0;
 
     list-style: none;
-    border: 1px solid green;
+    /* border: 1px solid green; */
+
+    align-items: baseline;
+    margin-top: 1.1rem;
 }
 
 /* Gets each nav item placed along the same line and allows items within each item to be positioned absolutely. */
 .nav-item {
     position: relative;
     display: flex;
-    margin-right: 5rem;
+    margin-right: calc(var(--logo-size) + 1rem);
 
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
 }
 
 /*For all nav links besides the main logo*/
@@ -38,7 +41,7 @@
     /* top: calc(var(--logo-size)/6.4); */
     font-size: calc(var(--logo-size)/3);
     font-weight: bold;
-    letter-spacing: -0.065rem;
+    /* letter-spacing: calc(var(--logo-size)*(-0.000)); */
 }
 
 .nav-item a {
@@ -49,28 +52,6 @@
 
 /* Hover Effects for Nav Bar----------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------------ */
-
-/* The text --------------------------------------------------------------------------------------------------- */
-/* .nav-item a::before {
-    position: absolute;
-    content: attr(title);
-    color: transparent;
-    color: black;
-    z-index: -1;
-    transition: 2000ms 200ms;
-}
-.nav-item a:hover::before {
-    color: black;
-}
-.nav-item a:not(hover)::before {
-    color: transparent;
-}
-.nav-item a:hover {
-    background-image: linear-gradient(45deg, var(--color-1), var(--color-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-} */
 
 .nav-item a:hover {
     color: var(--color-1);
@@ -106,19 +87,14 @@
     opacity: 0;
     /* transition-duration: 200ms; */
 }
-#logoSVG {
-    position: absolute;
-    width: var(--logo-size);
-    height: var(--logo-size);
-    top: 0;
-}
+
 
 #logoName {
     /* line-height: calc(var(--logo-size)*1.2/4.375); */
     /* line-height: 1.2rem; */
     /* border: 1px solid red; */
     font-size: calc(var(--logo-size)*0.5);
-    letter-spacing: -0.15rem;
+    letter-spacing: calc(var(--logo-size)*(-0.1/4));
     font-weight: bold;
     margin-left: calc(var(--logo-size)*0.76);
     
@@ -131,23 +107,26 @@
     /* bottom: -0.75rem;
     bottom: -1.4rem; */
 }
-
+/* 
 .nav-item:nth-child(n+2), #logoName {
     margin-top: calc(var(--logo-size)*0.335);
-}
+} */
 
 
 .nav-bar-right {
     display: flex;
+    height: 100%;
     /* border: 1px solid black; */
 }
 
 .contact-button-wrapper {
     height: 100%;
+    align-self: end;
 }
 
 .contact-button {
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.35rem 0.5rem;
+    margin-bottom: -0.3rem;
 
 
     background-color: var(--color-1);
@@ -160,7 +139,7 @@
     font-weight: bold;
     top: calc(var(--logo-size)/6.4);
     letter-spacing: -0.065rem;
-    margin-top: calc(var(--logo-size)*0.335);
+    /* margin-top: calc(var(--logo-size)*0.335); */
 
     transition: 200ms;
 }
