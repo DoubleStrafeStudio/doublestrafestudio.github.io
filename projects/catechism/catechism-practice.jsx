@@ -24,14 +24,12 @@ export function Practice () {
     let grade = document.getElementById('grade');
     const answer = data[questionNumber].answerFull;
     const strippedAnswer = formatResponse(answer)
-    console.log(strippedAnswer);
-    console.log(answer);
 
     return (
-        <div className='pracice-wrapper'>
+        <div className='practice-wrapper'>
             {/* QUESTION---------------------------------------------------------------------------------------------------------------- */}
             <div className='question' >
-                <Question questionNumber={questionNumber}/>
+                <Question questionNumber={questionNumber} />
             </div>
             <div className='question-navigation-wrapper'>
                 <button className='question-navigation-btn' onClick={handlePreviousQuestion}>
@@ -47,23 +45,21 @@ export function Practice () {
 
             {/* RESPONSE---------------------------------------------------------------------------------------------------------------- */}
             <form>
-                <textarea className='response-input' placeholder='Type the answer here' onChange={handleTyping}>
-
-                </textarea>
-
+                <textarea key={questionNumber} className='response-input' placeholder={`Type the answer here`} onChange={handleTyping} />
             </form>
             <button onClick={handleSubmit}>
                 Submit Response
             </button>
 
 
+            {/* GRADE ------------------------------------------------------------------------------------------------------------------ */}
             <div id='grade' className='grade' >
 
 
             </div>
 
             {/* ANSWER------------------------------------------------------------------------------------------------------------------ */}
-            <div className='answer-wrapper'>
+            <div className='answer-wrapper' id='answer-wrapper'>
                 <button onClick={toggleAnswerVisibility}>
                     {answerVisibility === 'none' ? 'Show' : 'Hide'} Answer
                 </button>
@@ -74,12 +70,15 @@ export function Practice () {
             </div>
             {/* <Answer questionNumber={questionNumber} response={response}/> */}
 
+
             {/* VERSE------------------------------------------------------------------------------------------------------------------- */}
             <div className='verse-wrapper'>
                 <Verse questionNumber={questionNumber}/>
             </div>
         </div>
     );
+
+
 
     function handlePreviousQuestion() {
         if (questionNumber === 0) {
@@ -90,7 +89,14 @@ export function Practice () {
     }
 
     function handleNewQuestion() {
-        setQuestionNumber(Math.floor(52*Math.random()))
+        let newQuestionNumber = 0;
+        do {
+            newQuestionNumber = Math.floor(52*Math.random())
+            console.log(`${questionNumber} --> ${newQuestionNumber}`);
+            if (questionNumber === newQuestionNumber) {console.log(`Same question! Rerolling.`)}
+        } while (questionNumber === newQuestionNumber);
+
+        setQuestionNumber(newQuestionNumber);
     }
 
     function handleNextQuestion() {
@@ -99,15 +105,6 @@ export function Practice () {
         } else {
             return setQuestionNumber(questionNumber + 1);
         }
-    }
-
-    function handleSubmit(e) {
-        e.preventDefault();
-        console.log(response);
-        console.log(gradeResponse(response));
-        // if (response === answer) {
-        //     grade.textContent = ''
-        // }
     }
 
     function handleTyping(e) {
@@ -122,23 +119,79 @@ export function Practice () {
         }
     }
 
+    function handleSubmit(e) {
+        e.preventDefault();
+        gradeResponse(response)
+        setAnswerVisibility('');
+
+    }
+
     function gradeResponse(response) {
+        console.log(`QUESTION ${questionNumber + 1}:`)
+
         // See if the response passes the following tests:
         // Matches the answer exactly, including punctuation, capitalization, etc.
+        console.log(`TEST #1: EXACT MATCH ------------------------------------------`);
+        console.log(`The submitted response: ${response}`);
+        console.log(`The correct answer    : ${answer}`)
+        
+        if (response === answer) {
+            console.log(`SUCCESS: Exact match`)
+        } else {
+            console.log(`FAILURE: Not an exact match`)
+        }
+        console.log(`\n`);
 
+
+        // Match the letters of the answer, no capitalization.
+        console.log(`TEST #2: LETTER EXACT MATCH -----------------------------------`);
+        let responseLettersOnly = formatResponse(response, 'letterExact');
+        let answerLettersOnly = formatResponse(answer, 'letterExact');
+        console.log(`The submitted response: ${responseLettersOnly}\n` + 
+                    `The correct answer    : ${answerLettersOnly}`)
+        if (responseLettersOnly === answerLettersOnly) {
+            console.log(`Every letter matched!`);
+        } else {
+            console.log(`There was not a letter match`);
+        }
+        console.log(`\n`);
+        
+        // Check for accuracy as a percentage by going through and matching characters. 
+        // If a character does not match, then try to get back on track.
+
+
+        // Match against the keywords of the answer. 
 
 
         return formatResponse(response);
     }
 
-    function formatResponse(rawResponse) {
-        //rawResponse = rawResponse.replace(/ /g, "");
-        rawResponse = rawResponse.replace(/[^\w\s]|_/g, "")
-                                 .replace(/\s+/g, " ")
-                                 .replace(/ /g, "");
-        rawResponse = rawResponse.toLowerCase();
+    function formatResponse(rawResponse, formatType) {
+        /* Types of formatting:
+           'letterExact': Remove all punctuation, capitalization, and spaces. It should only contain the lowercase letters in a continuous string.
 
-        return rawResponse;
+
+        */
+
+        //rawResponse = rawResponse.replace(/ /g, "");
+        if (formatType === 'letterExact') {
+            // return rawResponse.replace(/[^\w\s]|_/g, "") // Scrub punctuation
+            //                   .replace(/ /g, "")         // Scrub all spaces
+            //                   .toLowerCase();
+
+            return rawResponse.replace(/[^\w]|_/g, "") // Scrub anything that isn't a letter, including spaces and underscores.
+                              .toLowerCase();
+        }
+    }
+
+    function createAnswer(submittedResponse) {
+        const submittedResponseDiv = document.createElement("div");
+        const responseToDisplay = document.createTextNode(submittedResponse);
+
+        submittedResponseDiv.appendChild(responseToDisplay);
+
+        const answerDiv = document.getElementById('answer-wrapper');
+        document.body.insertBefore(submittedResponseDiv, answerDiv);
     }
 
 }
